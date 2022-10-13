@@ -28,8 +28,8 @@ const Notification = () => {
                     <Link to="#" className="text-dark notification-item d-block active">
                         <div className="d-flex align-items-center">
                             <div className="flex-shrink-0 me-3">
-                                <div className="avatar-xs bg-primary text-white rounded-circle text-center">
-                                    <i className="uil uil-user-check"></i>
+                                <div className="avatar-xs bg-primary text-white rounded-circle d-flex align-items-center justify-content-center">
+                                    <i className="uil uil-user-check "></i>
                                 </div>
                             </div>
                             <div className="flex-grow-1">
