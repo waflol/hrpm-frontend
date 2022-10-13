@@ -15,23 +15,7 @@ function App() {
                   <MainTopBar/>
                   <MainNavBar/>
                 </div>
-                <section>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <div>
-                    Content
-                  </div>
-                </section>
-                <div>
                 <Footer/>
-                </div>
-                
               </div>
             }>
           </Route>

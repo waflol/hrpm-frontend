@@ -12,17 +12,11 @@ function App() {
             element={
               <div>
                 <div>
-                  <MainTopBar/>
-                  <MainNavBar/>
+                  {/* <MainTopBar/>
+                  <MainNavBar/> */}
+                  Navbar
                 </div>
                 <section>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
                   <br/>
                   <div>
                     Content

@@ -14,15 +14,9 @@ function App() {
                 <div>
                   <MainTopBar/>
                   <MainNavBar/>
+                  Navbar
                 </div>
                 <section>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
                   <br/>
                   <div>
                     Content
