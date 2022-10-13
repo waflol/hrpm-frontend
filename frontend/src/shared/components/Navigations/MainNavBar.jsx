@@ -4,7 +4,6 @@ import LogoCompany from "./LogoCompany";
 import NavToggler from "./NavToggler";
 import Notification from "./Notification";
 import UserSetting from "./UserSetting";
-import LoginButton from "./LoginButton";
 const MainNavBar = () => {
   return (
     <React.Fragment>

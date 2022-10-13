@@ -132,7 +132,7 @@ const MainFooter = () => {
                 <Row>
                     <Col lg={4}>
                         <div className="footer-item mt-4 mt-lg-0 me-lg-5">
-                            <h4 className="text-white mb-4">Jobcy</h4>
+                            <h4 className="text-white mb-4">JobF</h4>
                             <p className="text-white-50">It is a long established fact that a reader will be of a page reader
                                 will be of at its layout.</p>
                             <p className="text-white mt-3">Follow Us on:</p>

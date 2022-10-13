@@ -8,7 +8,7 @@ const FooterAlt = () => {
         <Row >
           <Col lg={12}>
             <p className="text-white-50 text-center mb-0">
-              {new Date().getFullYear()} &copy; Jobcy - Job Listing Page
+              {new Date().getFullYear()} &copy; JobF - Job Listing Page
               Project in <a
                 href="https://github.com/waflol/hrpm/tree/main/frontend" target="_blank" rel="noreferrer" className="text-reset text-decoration-underline">
                 Github

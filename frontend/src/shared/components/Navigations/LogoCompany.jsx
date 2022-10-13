@@ -5,8 +5,8 @@ import lightLogo from "../../../assets/images/logo-light.png";
 const LogoCompany = () => {
     return (
         <Link className="navbar-brand text-dark fw-bold me-auto" to="/">
-            <img src={darkLogo} height="22" alt="" className="logo-dark" />
-            <img src={lightLogo} height="22" alt="" className="logo-light" />
+            <img src={darkLogo} height="40" alt="" className="logo-dark" />
+            <img src={lightLogo} height="40" alt="" className="logo-light" />
         </Link>
     )
 }
