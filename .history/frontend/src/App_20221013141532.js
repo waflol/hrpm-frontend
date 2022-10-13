@@ -11,8 +11,9 @@ function App() {
             path='/'
             element={
               <div>
-
-                <Footer/>
+                <MainTopBar />
+                <MainNavBar />
+                <MainFooter/>
               </div>
             }>
           </Route>

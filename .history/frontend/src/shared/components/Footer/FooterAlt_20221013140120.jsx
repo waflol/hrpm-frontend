@@ -1,5 +1,6 @@
 import React from 'react'
 import { Row, Col, Container } from 'reactstrap'
+import { Link } from "react-router-dom";
 
 const FooterAlt = () => {
   return (
@@ -9,10 +10,8 @@ const FooterAlt = () => {
           <Col lg={12}>
             <p className="text-white-50 text-center mb-0">
               {new Date().getFullYear()} &copy; Jobcy - Job Listing Page
-              Project in <a
-                href="https://github.com/waflol/hrpm/tree/main/frontend" target="_blank" rel="noreferrer" className="text-reset text-decoration-underline">
-                Github
-              </a>
+              Project in <Link to={"https://github.com/waflol/hrpm"} target="_blank"
+                className="text-reset text-decoration-underline">Github</Link>
             </p>
           </Col>
         </Row>

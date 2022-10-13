@@ -4,8 +4,8 @@ import LogoCompany from "./LogoCompany";
 import NavToggler from "./NavToggler";
 import Notification from "./Notification";
 import UserSetting from "./UserSetting";
-import LoginButton from "./LoginButton";
 const MainNavBar = () => {
+  
   return (
     <React.Fragment>
       <nav className="navbar navbar-expand-lg fixed-top sticky p-0 " id="navigation">
