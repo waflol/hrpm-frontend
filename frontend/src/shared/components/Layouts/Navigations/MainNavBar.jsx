@@ -7,7 +7,7 @@ import UserSetting from "./UserSetting";
 const MainNavBar = () => {
   return (
     <React.Fragment>
-      <nav className="navbar navbar-expand-lg fixed-top sticky p-0 " id="navigation">
+      <nav className="navbar navbar-expand-lg fixed-top sticky " id="navigation">
         <Container fluid className="custom-container">
           <LogoCompany/>
           <NavToggler/>

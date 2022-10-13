@@ -4,10 +4,10 @@ import {
     DropdownToggle,
     DropdownMenu,
 } from "reactstrap";
-import userImage2 from "../../../assets/images/user/img-02.jpg";
-import jobImage4 from "../../../assets/images/featured-job/img-04.png";
-import userImage1 from "../../../assets/images/user/img-01.jpg";
-import jobImage from "../../../assets/images/featured-job/img-01.png";
+import userImage2 from "../../../../assets/images/user/img-02.jpg";
+import jobImage4 from "../../../../assets/images/featured-job/img-04.png";
+import userImage1 from "../../../../assets/images/user/img-01.jpg";
+import jobImage from "../../../../assets/images/featured-job/img-01.png";
 import { Link } from 'react-router-dom';
 
 const Notification = () => {

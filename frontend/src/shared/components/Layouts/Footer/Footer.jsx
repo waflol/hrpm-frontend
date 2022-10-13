@@ -1,8 +1,8 @@
 import React from 'react'
 import MainFooter from './MainFooter'
 import FooterAlt from './FooterAlt'
-import Subscribe from './Subscribe'
-const Index = () => {
+import Subscribe from '../Subscribe'
+const Footer = () => {
   return (
     <React.Fragment>
         <Subscribe/>
@@ -12,4 +12,4 @@ const Index = () => {
   )
 }
 
-export default Index
+export default Footer

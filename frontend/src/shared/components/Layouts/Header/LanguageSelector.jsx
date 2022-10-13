@@ -7,11 +7,11 @@ import {
 } from "reactstrap";
 
 //import images
-import flagUs from "../../../assets/images/flags/us.jpg";
-import flagSp from "../../../assets/images/flags/spain.jpg";
-import flagGr from "../../../assets/images/flags/germany.jpg";
-import flagIt from "../../../assets/images/flags/italy.jpg";
-import flagRu from "../../../assets/images/flags/russia.jpg";
+import flagUs from "../../../../assets/images/flags/us.jpg";
+import flagSp from "../../../../assets/images/flags/spain.jpg";
+import flagGr from "../../../../assets/images/flags/germany.jpg";
+import flagIt from "../../../../assets/images/flags/italy.jpg";
+import flagRu from "../../../../assets/images/flags/russia.jpg";
 
 const LanguageSelector = () => {
     //Language Dropdown

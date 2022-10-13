@@ -1,7 +1,7 @@
-import MainNavBar from './shared/components/Navigations/MainNavBar';
-import MainTopBar from './shared/components/TopBar/MainTopBar';
+
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Footer from './shared/components/Footer';
+import LayoutHome from './home/components/Layouts/Layout';
+import Layout from './shared/components/Layouts';
 function App() {
   return (
     <div className="App">
@@ -10,29 +10,10 @@ function App() {
           <Route
             path='/'
             element={
-              <div>
-                <div>
-                  <MainTopBar/>
-                  <MainNavBar/>
-                </div>
-                <section>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <br/>
-                  <div>
-                    Content
-                  </div>
-                </section>
-                <div>
-                <Footer/>
-                </div>
-                
-              </div>
+              <Layout>
+                <LayoutHome/>
+              </Layout>
+              
             }>
           </Route>
         </Routes>

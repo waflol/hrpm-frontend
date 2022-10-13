@@ -4,7 +4,7 @@ import {
     DropdownToggle,
     DropdownMenu,
 } from "reactstrap";
-import profileImage from "../../../assets/images/profile.jpg";
+import profileImage from "../../../../assets/images/profile.jpg";
 import { Link } from 'react-router-dom';
 
 const UserSetting = () => {
