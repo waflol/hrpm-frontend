@@ -16,7 +16,7 @@ const UserSetting = () => {
             isOpen={userProfile}
             toggle={dropDownuserprofile}
             className="list-inline-item">
-            <DropdownToggle to="#" className="header-item" id="userdropdown" type="button" tag="a" aria-expanded="false">
+            <DropdownToggle to="#" className="header-item d-flex align-items-center" id="userdropdown" type="button" tag="a" aria-expanded="false">
                 <img src={profileImage} alt="mdo" width="35" height="35" className="rounded-circle me-1" />
                 <span className="d-none d-md-inline-block fw-medium">Hi, Jennifer</span>
             </DropdownToggle>
