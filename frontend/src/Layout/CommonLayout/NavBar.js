@@ -145,7 +145,7 @@ const NavBar = (props) => {
                                 <Link className="nav-link" to="/bloggrid" id="blog">Blog</Link>
                             </NavItem>
                             <NavItem>
-                                <Link className="nav-link" to="/#" id="quiz">Quiz</Link>
+                                <Link className="nav-link" to="/quizgrid" id="quiz">Quiz</Link>
                             </NavItem>
                             <NavItem className="dropdown dropdown-hover">
                                 <NavLink to="/#" id="jobsdropdown" role="button" onClick={() => setOthers(!others)}>

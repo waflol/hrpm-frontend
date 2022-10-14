@@ -44,6 +44,9 @@ const ManageJobs =  React.lazy(() => import("../pages/Profile/ManageJobs/ManageJ
 const BookMarkJobs =  React.lazy(() => import("../pages/Profile/BookMarkJobs/BookMarkJobs"));
 const MyProfile =  React.lazy(() => import("../pages/Profile/MyProfile/MyProfile"));
 
+//quiz section
+const QuizGrid = React.lazy(() => import("../pages/Quiz/QuizGrid/QuizGrid"));
+
 
 const userRoutes = [
 
@@ -64,6 +67,7 @@ const userRoutes = [
   //Companies Section
   { path : "/companydetails", component: CompanyDetails },
   { path : "/companylist", component: CompanyList },
+
   // Candidates Section
   { path : "/candidatedetails", component: CandidateDetails },
   { path : "/candidategrid", component: CandidateGrid },
@@ -84,6 +88,9 @@ const userRoutes = [
 
   //Home Section
   { path : "/", component: Layout2 },
+
+  // Quiz Section
+  { path : "/quizgrid", component: QuizGrid },
 ];
 
 const authRoutes = [    
