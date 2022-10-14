@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "homepage": "https://waflol.github.io/",
+  "homepage": "https://waflol.github.io/hrpm/frontend/",
   "private": true,
   "dependencies": {
     "@iconify/react": "^3.1.1",
