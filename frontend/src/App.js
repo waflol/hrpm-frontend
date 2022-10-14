@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
+import Routes from "./Routes/index";
 
-const App = () => {
+//import Custom Style scss
+import "./assets/scss/themes.scss";
+
+function App() {
   return (
-    <div>App</div>
-  )
+    <React.Fragment>
+      <Routes />
+    </React.Fragment>
+  );
 }
 
-export default App
+export default App;
