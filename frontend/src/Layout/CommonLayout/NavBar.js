@@ -119,8 +119,8 @@ const NavBar = (props) => {
             <nav className={"navbar navbar-expand-lg fixed-top sticky p-0 " + navClass} id="navigation">
                 <Container fluid className="custom-container">
                     <Link className="navbar-brand text-dark fw-bold me-auto" to="/">
-                        <img src={darkLogo} height="22" alt="" className="logo-dark" />
-                        <img src={lightLogo} height="22" alt="" className="logo-light" />
+                        <img src={darkLogo} height="50" alt="" className="logo-dark" />
+                        <img src={lightLogo} height="50" alt="" className="logo-light" />
                     </Link>
                     <div>
                         <NavbarToggler className="me-3" type="button" onClick={() => toggle()}>

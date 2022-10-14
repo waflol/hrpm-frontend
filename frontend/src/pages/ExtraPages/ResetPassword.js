@@ -28,8 +28,8 @@ const ResetPassword = () => {
                                                 <Col lg={6} className="text-center">
                                                     <CardBody className="p-4">
                                                         <Link to="/">
-                                                            <img src={lightLogo} alt="" className="logo-light" />
-                                                            <img src={darkLogo} alt="" className="logo-dark" />
+                                                            <img src={lightLogo} alt="" className="logo-light" height="70" />
+                                                            <img src={darkLogo} alt="" className="logo-dark" height="70" />
                                                         </Link>
                                                         <div className="mt-5">
                                                             <img src={resetPasswordImage} alt="" className="img-fluid" />
