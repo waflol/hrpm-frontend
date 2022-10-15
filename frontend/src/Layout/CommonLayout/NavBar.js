@@ -153,12 +153,12 @@ const NavBar = (props) => {
                                 </NavLink>
                                 <ul className={classname("dropdown-menu dropdown-menu-center", { show: others })} aria-labelledby="jobsdropdown">
                                     <li><Link className="dropdown-item" to="/contact">Contact</Link></li>
-                                    <li><Link className="dropdown-item" to="/aboutus">About Us</Link></li>
-                                    <li><Link className="dropdown-item" to="/services">Services</Link></li>
                                     <li><Link className="dropdown-item" to="/team">Team</Link></li>
+                                    {/* <li><Link className="dropdown-item" to="/aboutus">About Us</Link></li>
+                                    <li><Link className="dropdown-item" to="/services">Services</Link></li>
                                     <li><Link className="dropdown-item" to="/pricing">Pricing</Link></li>
                                     <Link className="dropdown-item" to="/privacyandpolicy">Priacy & Policy</Link>
-                                    <li><Link className="dropdown-item" to="/faqs">Faqs</Link></li>
+                                    <li><Link className="dropdown-item" to="/faqs">Faqs</Link></li> */}
                                 </ul>
                             </NavItem>
                         </ul>
