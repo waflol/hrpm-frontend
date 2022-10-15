@@ -29,7 +29,7 @@ const AccordianContentLeft = () => {
             <div className="accordion-item mt-4 border-0">
                 <h2 className="accordion-header" id="buyingtwo">
                     <button className="accordion-button" onClick={toggleSecond} type="button">
-                        How Jobcy Work ?
+                        How JobFind Work ?
                     </button>
                 </h2>
                 <Collapse isOpen={isCollapseSecond} id="buying-two">
