@@ -208,7 +208,6 @@ const TopBar = () => {
                     isOpen={dropdownOpen}
                     toggle={toggle}
                     className="d-inline-block language-switch"
-                    
                   >
                     <DropdownToggle tag="button" type="button" className="btn">
                       <img                        

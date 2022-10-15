@@ -116,7 +116,7 @@ const NavBar = (props) => {
 
     return (
         <React.Fragment>
-            <nav className={"navbar navbar-expand-lg fixed-top sticky p-0 " + navClass} id="navigation">
+            <nav className={"navbar navbar-expand-lg fixed-top sticky p-0 " + navClass} style={{zIndex: 1029}} id="navigation">
                 <Container fluid className="custom-container">
                     <Link className="navbar-brand text-dark fw-bold me-auto" to="/">
                         <img src={darkLogo} height="50" alt="" className="logo-dark" />
@@ -153,12 +153,12 @@ const NavBar = (props) => {
                                 </NavLink>
                                 <ul className={classname("dropdown-menu dropdown-menu-center", { show: others })} aria-labelledby="jobsdropdown">
                                     <li><Link className="dropdown-item" to="/contact">Contact</Link></li>
-                                    <li><Link className="dropdown-item" to="/aboutus">About Us</Link></li>
-                                    <li><Link className="dropdown-item" to="/services">Services</Link></li>
                                     <li><Link className="dropdown-item" to="/team">Team</Link></li>
+                                    {/* <li><Link className="dropdown-item" to="/aboutus">About Us</Link></li>
+                                    <li><Link className="dropdown-item" to="/services">Services</Link></li>
                                     <li><Link className="dropdown-item" to="/pricing">Pricing</Link></li>
                                     <Link className="dropdown-item" to="/privacyandpolicy">Priacy & Policy</Link>
-                                    <li><Link className="dropdown-item" to="/faqs">Faqs</Link></li>
+                                    <li><Link className="dropdown-item" to="/faqs">Faqs</Link></li> */}
                                 </ul>
                             </NavItem>
                         </ul>

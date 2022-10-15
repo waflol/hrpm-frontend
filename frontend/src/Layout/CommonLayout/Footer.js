@@ -72,8 +72,8 @@ const Footer = () => {
             menu: [
                 {
                     id: 1,
-                    link: "/candidatelist",
-                    subTitle: "Candidate List"
+                    link: "/candidategrid",
+                    subTitle: "Candidate Grid"
                 },
                 {
                     id: 2,
