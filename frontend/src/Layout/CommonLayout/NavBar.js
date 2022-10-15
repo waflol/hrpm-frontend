@@ -116,7 +116,7 @@ const NavBar = (props) => {
 
     return (
         <React.Fragment>
-            <nav className={"navbar navbar-expand-lg fixed-top sticky p-0 " + navClass} id="navigation">
+            <nav className={"navbar navbar-expand-lg fixed-top sticky p-0 " + navClass} style={{zIndex: 1029}} id="navigation">
                 <Container fluid className="custom-container">
                     <Link className="navbar-brand text-dark fw-bold me-auto" to="/">
                         <img src={darkLogo} height="50" alt="" className="logo-dark" />
