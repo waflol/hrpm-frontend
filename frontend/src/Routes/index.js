@@ -56,7 +56,7 @@ const Index = () => {
               </CommonLayout>
             </Route>
           </Switch>
-          
+          <Redirect exact={true} from="*" to="/error404" />
         </Suspense>
 
       </Router>
