@@ -84,18 +84,17 @@ const userRoutes = [
 
   //Home Section
   { path : "/", component: Layout2 },
-  
-  
+  { path: "/comingsoon", component: ComingSoon },
+  { path: "/error404", component: Error404 },
   
 ];
 
 const authRoutes = [
-  { path: "/error404", component: Error404 },
-  { path: "/comingsoon", component: ComingSoon }, 
   { path: "/resetpassword", component: ResetPassword }, 
   { path: "/signout", component: SignOut }, 
   { path: "/signup", component: SignUp },  
   { path: "/signin", component: SignIn },  
 ];
+
 
 export { userRoutes, authRoutes };

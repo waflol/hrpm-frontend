@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { userRoutes, authRoutes } from "./allRoutes";
-import { Route, Switch, BrowserRouter as Router, Redirect } from "react-router-dom";
+import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
 
 /* Layout */
 import CommonLayout from "../Layout/CommonLayout/index";
@@ -40,14 +40,14 @@ const Index = () => {
                     exact={true}
                   />
                 ))}
-
               </AuthLayout>
             </Route>
             <Route path={availablePublicRoutesPaths}>
               <CommonLayout>
                 {userRoutes.map((route, idx) => (
+                  
                   <Route
-                    path={route.path}
+                    path={route.path !== '/error404' ? route.path : "*"}
                     component={route.component}
                     key={idx}
                     exact={true}
@@ -56,9 +56,7 @@ const Index = () => {
               </CommonLayout>
             </Route>
           </Switch>
-          <Redirect exact={true} from="*" to="/error404" />
         </Suspense>
-
       </Router>
     </React.Fragment>
   );
