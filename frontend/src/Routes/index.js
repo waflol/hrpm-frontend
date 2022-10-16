@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { userRoutes, authRoutes } from "./allRoutes";
-import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import { Route, Switch, BrowserRouter as Router} from "react-router-dom";
 
 /* Layout */
 import CommonLayout from "../Layout/CommonLayout/index";
@@ -45,9 +45,8 @@ const Index = () => {
             <Route path={availablePublicRoutesPaths}>
               <CommonLayout>
                 {userRoutes.map((route, idx) => (
-                  
                   <Route
-                    path={route.path !== '/error404' ? route.path : "*"}
+                    path={route.path}
                     component={route.component}
                     key={idx}
                     exact={true}
