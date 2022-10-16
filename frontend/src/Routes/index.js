@@ -24,7 +24,7 @@ const Index = () => {
       </div>
     );
   };
-  
+
   return (
     <React.Fragment>
       <Router>
@@ -40,7 +40,7 @@ const Index = () => {
                     exact={true}
                   />
                 ))}
-              
+
               </AuthLayout>
             </Route>
             <Route path={availablePublicRoutesPaths}>
@@ -56,8 +56,9 @@ const Index = () => {
               </CommonLayout>
             </Route>
           </Switch>
+          
         </Suspense>
-        <Redirect from="*" to='/error404'/>
+
       </Router>
     </React.Fragment>
   );

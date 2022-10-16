@@ -42,7 +42,7 @@ const NavBar = (props) => {
 
     useEffect(() => {
         window.addEventListener("scroll", scrollNavigation, true);
-    });
+    },[]);
 
     function scrollNavigation() {
         var scrollup = window.pageYOffset;
@@ -70,7 +70,7 @@ const NavBar = (props) => {
         if (matchingMenuItem) {
             activateParentDropdown(matchingMenuItem);
         }
-    });
+    },[props.location.pathname]);
     const removeActivation = items => {
         for (var i = 0; i < items.length; ++i) {
             var item = items[i];
