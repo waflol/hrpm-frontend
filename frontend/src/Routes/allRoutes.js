@@ -84,9 +84,12 @@ const userRoutes = [
 
   //Home Section
   { path : "/", component: Layout2 },
+  
+  
+  
 ];
 
-const authRoutes = [    
+const authRoutes = [
   { path: "/error404", component: Error404 },
   { path: "/comingsoon", component: ComingSoon }, 
   { path: "/resetpassword", component: ResetPassword }, 
@@ -94,4 +97,5 @@ const authRoutes = [
   { path: "/signup", component: SignUp },  
   { path: "/signin", component: SignIn },  
 ];
+
 export { userRoutes, authRoutes };

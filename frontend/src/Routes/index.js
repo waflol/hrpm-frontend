@@ -1,15 +1,13 @@
 import React, { Suspense } from "react";
 import { userRoutes, authRoutes } from "./allRoutes";
-import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+import { Route, Switch, BrowserRouter as Router, Redirect } from "react-router-dom";
 
 /* Layout */
 import CommonLayout from "../Layout/CommonLayout/index";
 import AuthLayout from "../Layout/AuthLayout";
-
 const Index = () => {
   const availableAuthRoutesPath = authRoutes.map((r) => r["path"]);
   const availablePublicRoutesPaths = userRoutes.map((r) => r["path"]);
-
   const Loader = () => {
     return (
       <div id="preloader">
@@ -26,7 +24,7 @@ const Index = () => {
       </div>
     );
   };
-
+  
   return (
     <React.Fragment>
       <Router>
@@ -42,9 +40,9 @@ const Index = () => {
                     exact={true}
                   />
                 ))}
+              
               </AuthLayout>
             </Route>
-
             <Route path={availablePublicRoutesPaths}>
               <CommonLayout>
                 {userRoutes.map((route, idx) => (
@@ -59,6 +57,7 @@ const Index = () => {
             </Route>
           </Switch>
         </Suspense>
+        <Redirect from="*" to='/error404'/>
       </Router>
     </React.Fragment>
   );
