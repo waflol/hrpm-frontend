@@ -7,7 +7,7 @@ const Timer = () => {
   const Ref = useRef(null);
 
   // The state for our timer
-  const [timer, setTimer] = useState("00:60:60");
+  const [timer, setTimer] = useState("00:60:00");
 
   const getTimeRemaining = (e) => {
     const total = Date.parse(e) - Date.parse(new Date());
@@ -42,7 +42,7 @@ const Timer = () => {
     // If you adjust it you should also need to
     // adjust the Endtime formula we are about
     // to code next
-    setTimer("00:60:59");
+    setTimer("00:60:00");
 
     // If you try to remove this line the
     // updating of timer Variable will be
@@ -61,8 +61,6 @@ const Timer = () => {
 
     deadline.setMinutes(deadline.getMinutes() + 60);
     return deadline;
-    deadline.setSeconds(deadline.getSeconds() + 60);
-    return deadline;
   };
 
   // We can use useEffect so that when the component
@@ -76,7 +74,7 @@ const Timer = () => {
 
   return (
     <div className="timer">
-      <p>Time Left:{timer}</p>
+      <p>Time Left: {timer}</p>
     </div>
   );
 };

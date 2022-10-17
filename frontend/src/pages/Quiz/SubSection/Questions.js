@@ -8,6 +8,8 @@ const questions = [
       { answerText: "1481", isCorrect: false },
       { answerText: "1881", isCorrect: false },
     ],
+    mark: "false",
+    userChoosed: "",
   },
   {
     questionText: "Find 42",
@@ -18,6 +20,8 @@ const questions = [
       { answerText: "1564", isCorrect: false },
       { answerText: "1964", isCorrect: false },
     ],
+    mark: "false",
+    userChoosed: "",
   },
   {
     questionText: "Find 43",
@@ -28,6 +32,8 @@ const questions = [
       { answerText: "2049", isCorrect: false },
       { answerText: "1649", isCorrect: false },
     ],
+    mark: "false",
+    userChoosed: "",
   },
   {
     questionText: "Find 44",
@@ -38,6 +44,8 @@ const questions = [
       { answerText: "2136", isCorrect: false },
       { answerText: "1736", isCorrect: false },
     ],
+    mark: "false",
+    userChoosed: "",
   },
   {
     questionText: "Find 46",
@@ -48,6 +56,8 @@ const questions = [
       { answerText: "1916", isCorrect: false },
       { answerText: "2316", isCorrect: false },
     ],
+    mark: "false",
+    userChoosed: "",
   },
   {
     questionText: "Find 45",
@@ -58,6 +68,9 @@ const questions = [
       { answerText: "2125", isCorrect: false },
       { answerText: "2225", isCorrect: false },
     ],
+    mark: "false",
+    userChoosed: "",
   },
 ];
+
 export default questions;

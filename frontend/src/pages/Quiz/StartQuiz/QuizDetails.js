@@ -8,12 +8,6 @@ function QuizDetails() {
   const handleOption = (e) => {
     setOption(e.target.value);
   };
-  function deSelect() {
-    let ele = document.getElementsByClassName("option");
-    for (const element of ele) {
-      if (element.type === "radio") element.checked = false;
-    }
-  }
 
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showScore, setShowScore] = useState(false);
@@ -23,6 +17,20 @@ function QuizDetails() {
   const [count2, setCount2] = useState(0);
   const [count3, setCount3] = useState(5);
   const [count4, setCount4] = useState(6);
+
+  function allDeSelect() {
+    let ele = document.getElementsByClassName("option");
+    for (const element of ele) {
+      if (element.type === "radio") element.checked = false;
+    }
+  }
+
+  function deSelect() {
+    let ele = document.getElementsByClassName("option" + currentQuestion);
+    for (const element of ele) {
+      if (element.type === "radio") element.checked = false;
+    }
+  }
 
   const handleAnswerOptionClick = (isCorrect) => {
     if (isCorrect) {
@@ -35,6 +43,31 @@ function QuizDetails() {
     } else {
       setShowScore(true);
     }
+  };
+
+  const markQuestion = () => {
+    if (questions[currentQuestion].mark === true) {
+      questions[currentQuestion]["mark"] = false;
+    } else {
+      questions[currentQuestion]["mark"] = true;
+      
+    }
+
+    // return questions.map((obj) => {
+    //   if (obj.questionText === questions[currentQuestion].questionText) {
+    //     console.log("equal");
+    //     if (obj.mark === true) {
+    //       console.log("test");
+    //       return {
+    //         mark: "false",
+    //       };
+    //     }
+
+    //     return {
+    //       mark: "true",
+    //     };
+    //   }
+    // });
   };
 
   function Increase() {
@@ -67,7 +100,7 @@ function QuizDetails() {
           <div className="fs-3">
             <h1>Question. {currentQuestion + 1}</h1>
             <br />
-            <hr />{" "}
+            <hr />
           </div>
           <div className="questionchange">
             <p className="questiontext">
@@ -81,10 +114,14 @@ function QuizDetails() {
                     <input
                       type="radio"
                       className="option"
+                      name="option"
                       color="primary"
-                      value="option1"
+                      value={answerOption.answerText}
                     />
-                    <span> {answerOption.answerText}</span>
+                    <label htmlFor={answerOption.answerText}>
+                      &nbsp;
+                      {answerOption.answerText}
+                    </label>
                   </div>
                 )
               )}
@@ -94,30 +131,27 @@ function QuizDetails() {
           <div className="d-flex justify-content-center">
             <div className="buttons-box">
               <button
-                onClick={(event) => [
-                  handleAnswerOptionClick(),
-                  Increase(),
-                  DIncrease(),
-                  DIncrease1(),
-                ]}
+                onClick={(event) => [handleAnswerOptionClick()]}
                 className="btn btn-primary btn-hover btn-save"
               >
-                {" "}
-                SAVE & NEXT
+                NEXT
               </button>
               <button
-                onClick={deSelect}
+                onClick={allDeSelect}
                 className="btn btn-primary btn-hover btn-clear"
               >
-                CLEAR
+                CLEAR ALL
               </button>
               <button
-                onClick={(event) => [handleAnswerOptionClick(), Increase1()]}
+                onClick={markQuestion}
                 className="btn btn-primary btn-hover btn-mark"
               >
                 MARK
               </button>
-              <button className="btn btn-primary btn-hover btn-submit">
+              <button
+                type="submit"
+                className="btn btn-primary btn-hover btn-submit"
+              >
                 SUBMIT
               </button>
             </div>
@@ -135,7 +169,7 @@ function QuizDetails() {
           {questions.map((item, index) => (
             <div
               key={index}
-              className="question-no"
+              className={`questionNo${index}`}
               style={{
                 display: "flex",
                 justifyContent: "center",
@@ -149,8 +183,8 @@ function QuizDetails() {
                 backgroundColor:
                   index === currentQuestion
                     ? "#B4C6A6"
-                    : item?.selected
-                    ? "grey"
+                    : item.mark === true
+                    ? "#f5ba13"
                     : "#EAEAEA",
               }}
               onClick={() => setCurrentQuestion(index)}
@@ -160,6 +194,7 @@ function QuizDetails() {
           ))}
         </div>
       </div>
+      {/* <div>{console.log(score)}</div> */}
     </div>
   );
 }
