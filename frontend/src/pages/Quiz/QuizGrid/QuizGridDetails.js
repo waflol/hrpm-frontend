@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Col, Row, Modal, ModalBody, Input, Label, CardBody } from "reactstrap";
+import { Col, Row, Modal, ModalBody, CardBody } from "reactstrap";
 import { Link } from "react-router-dom";
 
 import userImage1 from "../../../assets/images/user/img-01.jpg";
@@ -13,36 +13,32 @@ import userImage8 from "../../../assets/images/user/img-08.jpg";
 import userImage9 from "../../../assets/images/user/img-09.jpg";
 
 const QuizGridDetails = () => {
-  //Apply Now Model
-  const [modal, setModal] = useState(false);
-  const openModal = () => setModal(!modal);
-
   const quizgridDetails = [
     {
       id: 1,
       userImg: userImage1,
       quizName: "Charles Dickens",
-      quizStatusClassName:
-        "profile-active position-absolute badge rounded-circle bg-success",
-      experience: "0-3 Years",
+      quizDescription:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt quae dignissimos, deleniti voluptas officia. Hic, quia.",
+      position: "Junior",
       addclassNameBookmark: true,
     },
     {
       id: 2,
       userImg: userImage2,
       quizName: "Gabriel Palmer",
-      quizStatusClassName:
-        "profile-active position-absolute badge rounded-circle bg-success",
-      experience: "3.5 Years",
+      quizDescription:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt quae dignissimos, deleniti voluptas officia. Hic, quia.",
+      position: "Junior",
       addclassNameBookmark: true,
     },
     {
       id: 3,
       userImg: userImage3,
       quizName: "James Lemire",
-      quizStatusClassName:
-        "profile-active position-absolute badge rounded-circle bg-danger",
-      experience: "4 Years",
+      quizDescription:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt quae dignissimos, deleniti voluptas officia. Hic, quia.",
+      position: "Senior",
       addclassNameBookmark: false,
     },
 
@@ -50,57 +46,68 @@ const QuizGridDetails = () => {
       id: 4,
       userImg: userImage4,
       quizName: "Rebecca Swartz",
-      quizStatusClassName:
-        "profile-active position-absolute badge rounded-circle bg-success",
-      experience: "2 Years",
+      quizDescription:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt quae dignissimos, deleniti voluptas officia. Hic, quia.",
+      position: "Project Manager",
       addclassNameBookmark: false,
     },
     {
       id: 5,
       userImg: userImage5,
       quizName: "Betty Richards",
-      quizStatusClassName:
-        "profile-active position-absolute badge rounded-circle bg-success",
-      experience: "2 Years",
+      quizDescription:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt quae dignissimos, deleniti voluptas officia. Hic, quia.",
+      position: "Leader",
       addclassNameBookmark: false,
     },
     {
       id: 6,
       userImg: userImage6,
       quizName: "Jeffrey Montgomery",
-      quizStatusClassName:
-        "profile-active position-absolute badge rounded-circle bg-success",
-      experience: "7 Years",
+      quizDescription:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt quae dignissimos, deleniti voluptas officia. Hic, quia.",
+      position: "Fresher",
       addclassNameBookmark: true,
     },
     {
       id: 7,
       userImg: userImage7,
       quizName: "Brooke Hayes",
-      quizStatusClassName:
-        "profile-active position-absolute badge rounded-circle bg-success",
-      experience: "4 Years",
+      quizDescription:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt quae dignissimos, deleniti voluptas officia. Hic, quia.",
+      position: "Internship",
       addclassNameBookmark: true,
     },
     {
       id: 8,
       userImg: userImage8,
       quizName: "Cerys Woods",
-      quizStatusClassName:
+      quizDescription:
         "profile-active position-absolute badge rounded-circle bg-danger",
-      experience: "4.5 Years",
+      position: "Senior",
       addclassNameBookmark: false,
     },
     {
       id: 9,
       userImg: userImage9,
       quizName: "Olivia Murphy",
-      quizStatusClassName:
-        "profile-active position-absolute badge rounded-circle bg-success",
-      experience: "7 Years",
+      quizDescription:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni nesciunt quae dignissimos, deleniti voluptas officia. Hic, quia.",
+      position: "Intership",
       addclassNameBookmark: false,
     },
   ];
+
+  const [quizModal, setquizModal] = useState(quizgridDetails[0]);
+
+  //Apply Now Model
+  const [modal, setModal] = useState(false);
+
+  const openModal = (quizgridDetailsNew) => {
+    setquizModal(quizgridDetailsNew);
+    setModal(!modal);
+  };
+
   return (
     <React.Fragment>
       <Row className="align-items-center">
@@ -195,7 +202,7 @@ const QuizGridDetails = () => {
                     <div className="row g-0">
                       <div className="border-end px-3 py-2">
                         <p className="text-muted mb-0">
-                          Exp. : {quizgridDetailsNew.experience}
+                          Position: {quizgridDetailsNew.position}
                         </p>
                       </div>
                     </div>
@@ -207,7 +214,7 @@ const QuizGridDetails = () => {
                   <div className="mt-3">
                     <Link
                       to="#hireNow"
-                      onClick={openModal}
+                      onClick={() => openModal(quizgridDetailsNew)}
                       data-bs-toggle="modal"
                       className="btn btn-primary btn-hover w-100 mt-2"
                     >
@@ -232,7 +239,7 @@ const QuizGridDetails = () => {
               <ModalBody className="p-5">
                 <div className="text-center mb-4">
                   <h5 className="modal-title" id="staticBackdropLabel">
-                    Hire Now
+                    Start Quiz
                   </h5>
                 </div>
                 <div className="position-absolute end-0 top-0 p-3">
@@ -245,44 +252,23 @@ const QuizGridDetails = () => {
                   ></button>
                 </div>
                 <div className="mb-3">
-                  <Label for="namrFormControlInput" className="form-label">
-                    Company Name
-                  </Label>
-                  <Input
-                    type="text"
-                    className="form-control"
-                    id="namrFormControlInput"
-                    placeholder="Enter your company name"
-                  />
+                  <h6>Yes/No Question Quizzes</h6>
+                  <div>
+                    <ul>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li>{quizModal.quizDescription}</li>
+                    </ul>
+                  </div>
+                  <h6>Good Luck!</h6>
                 </div>
-                <div className="mb-3">
-                  <Label for="emailFormControlInput" className="form-label">
-                    Email Address
-                  </Label>
-                  <Input
-                    type="email"
-                    className="form-control"
-                    id="emailFormControlInput"
-                    placeholder="Enter your email"
-                  />
-                </div>
-                <div className="mb-4">
-                  <Label
-                    for="messageFormControlTextarea"
-                    className="form-label"
-                  >
-                    Message
-                  </Label>
-                  <textarea
-                    className="form-control"
-                    id="messageFormControlTextarea"
-                    rows="4"
-                    placeholder="Enter your message"
-                  ></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary w-100">
-                  Send Message
-                </button>
+                <Link
+                  to="/startquiz"
+                  className="btn btn-primary btn-hover w-100 mt-2"
+                >
+                  Start
+                </Link>
               </ModalBody>
             </Modal>
           </div>

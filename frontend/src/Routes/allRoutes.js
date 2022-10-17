@@ -46,6 +46,7 @@ const MyProfile =  React.lazy(() => import("../pages/Profile/MyProfile/MyProfile
 
 //quiz section
 const QuizGrid = React.lazy(() => import("../pages/Quiz/QuizGrid/QuizGrid"));
+const StartQuiz =  React.lazy(() => import("../pages/Quiz/StartQuiz/StartQuiz"));
 
 
 const userRoutes = [
@@ -91,6 +92,7 @@ const userRoutes = [
 
   // Quiz Section
   { path : "/quizgrid", component: QuizGrid },
+  { path : "/startquiz", component: StartQuiz },
 ];
 
 const authRoutes = [    

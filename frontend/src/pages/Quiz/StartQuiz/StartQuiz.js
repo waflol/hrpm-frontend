@@ -1,22 +1,22 @@
 import React from 'react';
 import { Container, Row } from 'reactstrap';
-import LeftSideContent from './LeftSideContent';
-import RightSideContent from './RightSideContent';
 import Section from './Section';
 import MetaTags from "react-meta-tags";
+import QuizDetails from './QuizDetails';
 
 const CandidateDetails = () => {
     return (
         <React.Fragment>
             <MetaTags>
-            <title>Candidate Details | Jobcy - Job Listing Template | Themesdesign</title>
+            <title>Start Quiz | JobFind</title>
             </MetaTags>
             <Section/>
             <section className="section">
             <Container >
             <Row>
-            <LeftSideContent/>  
-            <RightSideContent/>  
+            {/* <LeftSideContent/>  
+            <RightSideContent/>   */}
+            <QuizDetails/>
             </Row>   
             </Container>
             </section> 

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container } from 'reactstrap';
 import JobFilters from './QuizFilters';
-import CandidateGridDetails from './QuizGridDetails';
 import Section from './Section';
 import Pagination from '../../Jobs/JobList2/Pagination';
 import MetaTags from "react-meta-tags";
+import QuizGridDetails from './QuizGridDetails';
 
 const QuizGrid = () => {
     return (
@@ -16,7 +16,7 @@ const QuizGrid = () => {
             <section className="section">
             <Container>
             <JobFilters/>
-            <CandidateGridDetails/>
+            <QuizGridDetails/>
             <Pagination/>
             </Container>
             </section>

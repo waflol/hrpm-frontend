@@ -9,12 +9,12 @@ const Section = () => {
                     <div className="row justify-content-center">
                         <div className="col-md-6">
                             <div className="text-center text-white">
-                                <h3 className="mb-4">Candidate Details</h3>
+                                <h3 className="mb-4">Start Quiz</h3>
                                 <div className="page-next">
                                     <nav className="d-inline-block" aria-label="breadcrumb text-center">
                                         <ol className="breadcrumb justify-content-center">
                                             <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-                                            <li className="breadcrumb-item active" aria-current="page"> Candidate Details </li>
+                                            <li className="breadcrumb-item active" aria-current="page"> Start Quiz </li>
                                         </ol>
                                     </nav>
                                 </div>
