@@ -14,8 +14,6 @@ const CandidateDetails = () => {
             <section className="section">
             <Container >
             <Row>
-            {/* <LeftSideContent/>  
-            <RightSideContent/>   */}
             <QuizDetails/>
             </Row>   
             </Container>
