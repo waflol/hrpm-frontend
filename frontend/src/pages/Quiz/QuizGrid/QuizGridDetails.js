@@ -177,9 +177,7 @@ const QuizGridDetails = () => {
                       />
                     </div>
                     <div className="ms-3">
-                      <Link to="/candidate-details" className="primary-link">
-                        <h5 className="fs-17">{quizgridDetailsNew.quizName}</h5>
-                      </Link>
+                      <h5 className="fs-17">{quizgridDetailsNew.quizName}</h5>
                     </div>
                   </div>
                   <ul className="list-inline d-flex justify-content-between align-items-center">
