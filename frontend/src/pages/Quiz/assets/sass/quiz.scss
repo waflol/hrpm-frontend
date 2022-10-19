@@ -45,23 +45,29 @@ hr {
 .btn-save {
   background-color: #4caf50 !important;
   border-color: #4caf50;
+  margin: 2% 2% 0 2%;
 }
 
 .btn-mark {
   background-color: #f5ba13 !important;
   border-color: #f5ba13;
+  margin: 2% 2% 0 2%;
 }
 
 .btn-submit {
   background-color: #555555 !important;
   border-color: #555555;
+  margin: 2% 2% 0 2%;
+}
+
+.btn-clear {
+  margin: 2% 2% 0 2%;
 }
 
 .buttons-box {
-  width: 45%;
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
   margin-top: 5%;
+  text-align: center;
 }
 
 .nv {

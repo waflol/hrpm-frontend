@@ -166,34 +166,33 @@ function QuizDetails() {
               </div>
             </div>
             <br />
-            <div className="d-flex justify-content-center">
-              <div className="buttons-box">
-                <button
-                  onClick={(event) => [handleAnswerOptionClick()]}
-                  className="btn btn-primary btn-hover btn-save"
-                >
-                  NEXT
-                </button>
-                <button
-                  onClick={allDeSelect}
-                  className="btn btn-primary btn-hover btn-clear"
-                >
-                  CLEAR ALL
-                </button>
-                <button
-                  onClick={markQuestion}
-                  className="btn btn-primary btn-hover btn-mark"
-                >
-                  MARK
-                </button>
-                <button
-                  onClick={submit}
-                  type="submit"
-                  className="btn btn-primary btn-hover btn-submit"
-                >
-                  SUBMIT
-                </button>
-              </div>
+
+            <div className="buttons-box">
+              <button
+                onClick={(event) => [handleAnswerOptionClick()]}
+                className="btn btn-primary btn-hover btn-save"
+              >
+                NEXT
+              </button>
+              <button
+                onClick={allDeSelect}
+                className="btn btn-primary btn-hover btn-clear"
+              >
+                CLEAR ALL
+              </button>
+              <button
+                onClick={markQuestion}
+                className="btn btn-primary btn-hover btn-mark"
+              >
+                MARK
+              </button>
+              <button
+                onClick={submit}
+                type="submit"
+                className="btn btn-primary btn-hover btn-submit"
+              >
+                SUBMIT
+              </button>
             </div>
           </div>
           <div
@@ -234,29 +233,17 @@ function QuizDetails() {
         </div>
       ) : (
         <div className="container">
-          <div
-            style={{
-              background: "#fff",
-              borderRadius: "7px",
-              boxShadow: "0 2px 5px #ccc",
-              padding: "10px",
-              width: "100%",
-              float: "left",
-              marginTop: "5%",
-            }}
-          >
-            <div className="d-flex justify-content-center">
-              <div className="fs-3">
-                <div
-                  style={{
-                    fontSize: "50px",
-                  }}
-                >
-                  {passed ? "CONGRATULATIONS" : "GOODLUCK NEXT TIME"}
-                </div>
-                <br />
-                <hr />
+          <div className="question-box">
+            <div className="text-center">
+              <div
+                style={{
+                  fontSize: "40px",
+                }}
+              >
+                {passed ? "CONGRATULATIONS" : "GOODLUCK NEXT TIME"}
               </div>
+              <br />
+              <hr />
             </div>
             <div className="text-center d-flex flex-column">
               <div
@@ -278,15 +265,14 @@ function QuizDetails() {
               </div>
             </div>
             <br />
-            <div className="d-flex justify-content-center">
-              <div className="w-25">
-                <Link
-                  to="/quizgrid"
-                  className="btn btn-primary btn-hover w-100 my-4"
-                >
-                  Confirm
-                </Link>
-              </div>
+            <div className="text-center"
+            >
+              <Link
+                to="/quizgrid"
+                className="btn btn-primary btn-hover my-4"
+              >
+                Confirm
+              </Link>
             </div>
           </div>
         </div>
