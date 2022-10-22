@@ -212,7 +212,7 @@ const CandidateGridDetails = () => {
                       </span>
                     </div>
                     <div className="ms-3">
-                      <Link to="/candidate-details" className="primary-link">
+                      <Link to="/candidatedetails" className="primary-link">
                         <h5 className="fs-17">
                           {candidategridDetailsNew.candidateName}
                         </h5>

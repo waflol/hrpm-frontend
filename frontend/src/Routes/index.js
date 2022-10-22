@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import { userRoutes, authRoutes } from "./allRoutes";
-import { Route, Switch, BrowserRouter as Router} from "react-router-dom";
+import { Route, Switch, BrowserRouter as Router, Redirect} from "react-router-dom";
 
 /* Layout */
 import CommonLayout from "../Layout/CommonLayout/index";
@@ -54,6 +54,7 @@ const Index = () => {
                 ))}
               </CommonLayout>
             </Route>
+            <Redirect from="*" to="/error404" />
           </Switch>
         </Suspense>
       </Router>

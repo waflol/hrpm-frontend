@@ -85,7 +85,8 @@ const userRoutes = [
   //Home Section
   { path : "/", component: Layout2 },
   { path: "/comingsoon", component: ComingSoon },
-  { path: "*", component: Error404 },
+  { path: "/error404", component: Error404 },
+  
 ];
 
 const authRoutes = [
