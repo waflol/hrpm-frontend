@@ -7,6 +7,7 @@ function QuizDetails() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [score, setScore] = useState(0);
   const [passed, setPassed] = useState(false);
+  const [questionsTemp, setQuestionsTemp] = useState(questions);
 
   function allDeSelect() {
     let ele = document.getElementsByClassName("option");
@@ -17,25 +18,48 @@ function QuizDetails() {
     }
   }
 
-  const handleAnswerOptionClick = (isCorrect) => {
-    if (isCorrect) {
-      setScore(score + 1);
-      if ((score / questions.length) * 100 > 80) {
-        setPassed(true);
-      }
-    }
+  const changeUserChoosed = (e) => {
+    const temp = [...questionsTemp];
+    temp[currentQuestion].userChoosed = e.target.value;
+    setQuestionsTemp(temp);
+  };
 
+  const next = () => {
     const nextQuestion = currentQuestion + 1;
     if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion);
     }
   };
 
+  const checkPassedQuiz = () => {
+    let temp = 0;
+    for (const question of questionsTemp) {
+      for (const answerOption of question.answerOptions) {
+        if (
+          question.userChoosed === answerOption.answerText &&
+          answerOption.isCorrect
+        ) {
+          console.log(question.userChoosed);
+          console.log(answerOption.answerText);
+          console.log(answerOption.isCorrect);
+          temp++;
+          console.log(temp);
+        }
+      }
+    }
+
+    setScore(temp);
+
+    if ((temp / questionsTemp.length) * 100 >= 80) {
+      setPassed(true);
+    }
+  };
+
   const markQuestion = () => {
-    if (questions[currentQuestion].mark === true) {
-      questions[currentQuestion].mark = false;
+    if (questionsTemp[currentQuestion].mark === true) {
+      questionsTemp[currentQuestion].mark = false;
     } else {
-      questions[currentQuestion].mark = true;
+      questionsTemp[currentQuestion].mark = true;
     }
   };
 
@@ -123,6 +147,7 @@ function QuizDetails() {
 
   const submit = () => {
     setEndTimer(true);
+    checkPassedQuiz();
   };
 
   return (
@@ -142,11 +167,11 @@ function QuizDetails() {
             </div>
             <div className="questionchange">
               <p className="questiontext">
-                {questions[currentQuestion].questionText}
+                {questionsTemp[currentQuestion].questionText}
               </p>
               <br />
-              <div className="question-answer">
-                {questions[currentQuestion].answerOptions.map(
+              <div className={`question-answer-${currentQuestion}`}>
+                {questionsTemp[currentQuestion].answerOptions.map(
                   (answerOption, key) => (
                     <div key={key} className="mt-2">
                       <input
@@ -155,6 +180,13 @@ function QuizDetails() {
                         name="option"
                         color="primary"
                         value={answerOption.answerText}
+                        checked={
+                          questionsTemp[currentQuestion].userChoosed ===
+                          answerOption.answerText
+                            ? true
+                            : false
+                        }
+                        onClick={(e) => changeUserChoosed(e)}
                       />
                       <label htmlFor={answerOption.answerText}>
                         &nbsp;
@@ -169,7 +201,7 @@ function QuizDetails() {
 
             <div className="buttons-box">
               <button
-                onClick={(event) => [handleAnswerOptionClick()]}
+                onClick={next}
                 className="btn btn-primary btn-hover btn-save"
               >
                 NEXT
@@ -203,7 +235,7 @@ function QuizDetails() {
               justifyContent: "center",
             }}
           >
-            {questions.map((item, index) => (
+            {questionsTemp.map((item, index) => (
               <div
                 key={index}
                 className={`questionNo${index}`}
@@ -252,7 +284,8 @@ function QuizDetails() {
                   fontSize: "24px",
                 }}
               >
-                You scored {score} out of {questions.length}
+                You scored {score} out of {questionsTemp.length}
+                {console.log(score)}
               </div>
               <br />
               <div
@@ -265,12 +298,8 @@ function QuizDetails() {
               </div>
             </div>
             <br />
-            <div className="text-center"
-            >
-              <Link
-                to="/quizgrid"
-                className="btn btn-primary btn-hover my-4"
-              >
+            <div className="text-center">
+              <Link to="/quizgrid" className="btn btn-primary btn-hover my-4">
                 Confirm
               </Link>
             </div>
