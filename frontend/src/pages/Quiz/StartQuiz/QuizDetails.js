@@ -39,20 +39,16 @@ function QuizDetails() {
           question.userChoosed === answerOption.answerText &&
           answerOption.isCorrect
         ) {
-          console.log(question.userChoosed);
-          console.log(answerOption.answerText);
-          console.log(answerOption.isCorrect);
           temp++;
-          console.log(temp);
         }
       }
     }
 
-    setScore(temp);
-
     if ((temp / questionsTemp.length) * 100 >= 80) {
       setPassed(true);
     }
+
+    setScore(temp);
   };
 
   const markQuestion = () => {
